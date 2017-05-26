@@ -30,7 +30,6 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        pry.start
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
         format.json { render action: 'show', status: :created, location: @post }
       else
